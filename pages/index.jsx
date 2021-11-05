@@ -2,6 +2,8 @@ import Head from "next/head";
 import { useEffect } from "react";
 import UploadForm from "../components/ui/UploadForm";
 import ImageList from "../components/UI/ImageList";
+import Title from "../components/UI/Title";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
   return (
@@ -12,18 +14,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section>
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-600">Splash It</h1>
-          <p className="mt-5 text-base text-gray-500">
-            an Unsplash photo gallery clone, because why not
-          </p>
-        </div>
-        <div className="flex justify-center mt-5">
-          <UploadForm />
-        </div>
-        <div className="mt-5">
+        <Title />
+        <UploadForm />
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <ImageList />
-        </div>
+        </motion.div>
       </section>
     </>
   );

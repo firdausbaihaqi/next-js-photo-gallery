@@ -6,7 +6,7 @@ const useFirestore = () => {
     const [docs, setDocs] = useState([]);
 
     const dbRef = collection(db, 'images'); 
-    const q = query(dbRef, orderBy('createdAt', 'asc')); /* query */
+    const q = query(dbRef, orderBy('createdAt', 'desc')); /* query */
 
     useEffect(() => {
         const unsub = onSnapshot(q, (querySnapshot) => {

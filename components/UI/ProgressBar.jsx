@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import useStorage from "../../hooks/useStorage";
+import { motion } from "framer-motion";
 
 function ProgressBar({ file, setFile, setStatus }) {
   const { progress, url } = useStorage(file);
@@ -7,7 +8,7 @@ function ProgressBar({ file, setFile, setStatus }) {
   useEffect(() => {
     if (url) {
       setFile(null);
-      setStatus(true)
+      setStatus(true);
     }
   }, [url]);
 
@@ -16,7 +17,7 @@ function ProgressBar({ file, setFile, setStatus }) {
       <div className="flex items-center mt-5">
         <div className="w-full bg-red-100 progress">
           <div
-            className="bg-red-400 progress"
+            className="duration-500 bg-red-400 progress"
             style={{ width: progress + "%" }}
           ></div>
         </div>
