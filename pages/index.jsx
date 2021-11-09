@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useEffect } from "react";
-import UploadForm from "../components/ui/UploadForm";
+import UploadForm from "../components/UI/UploadForm";
 import ImageList from "../components/UI/ImageList";
 import Title from "../components/UI/Title";
 import { motion, AnimatePresence } from "framer-motion";
