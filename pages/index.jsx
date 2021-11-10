@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useEffect } from "react";
 import UploadForm from "../components/UI/UploadForm";
-import ImageList from "../components/UI/ImageList";
+import ImgList from "../components/UI/ImgList";
 import Title from "../components/UI/Title";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -17,7 +17,7 @@ export default function Home() {
         <Title />
         <UploadForm />
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-          <ImageList />
+          <ImgList />
         </motion.div>
       </section>
     </>

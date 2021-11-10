@@ -14,7 +14,6 @@ const useStorage = (file) => {
 
         // upload to storageRef path in firebase, with image file from params
         const uploadTask = uploadBytesResumable(storageRef, file);
-
         uploadTask.on('state_change', (snapshot) => {
             const progressPercentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             setProgress(progressPercentage);
