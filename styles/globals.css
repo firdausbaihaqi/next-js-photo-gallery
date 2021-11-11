@@ -11,6 +11,10 @@ body {
   font-family: "Noto Serif";
 }
 
-.uploadBtn {
+.inputBtn {
   @apply bg-red-400 border-white hover:border-2 hover:border-white hover:bg-red-400 btn btn-circle hover:ring-2 ring-red-400;
+}
+
+.uploadBtn {
+  @apply bg-red-400 border-white hover:border-2 hover:border-white hover:bg-red-400 btn font-sans tracking-wider hover:ring-2 ring-red-400;
 }

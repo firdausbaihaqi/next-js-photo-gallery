@@ -15,7 +15,7 @@ function ImageList() {
             key={doc.id}
             className="inline-block w-full h-auto opacity-100"
           >
-            <Img url={doc.url} />
+            <Img url={doc.url} width={doc.width} height={doc.height} />
           </motion.div>
         ))}
     </div>

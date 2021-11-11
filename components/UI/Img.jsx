@@ -2,21 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import NextImage from "next/image";
 
-function Img({ url }) {
-  const [imgWidth, setImgWidth] = useState(0);
-  const [imgHeight, setImgHeight] = useState(0);
-
-  // make new image instance to get it's dimension
-  const img = new Image();
-  img.src = url;
-
-  useEffect(() => {
-    setImgWidth(img.width);
-    setImgHeight(img.height);
-    console.log(img.width, img.height);
-    console.log(imgWidth, imgHeight);
-  }, [img.width, img.height]); //img dimension always start at 0 because it's not fully loaded
-
+function Img({ url, width, height }) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -24,10 +10,17 @@ function Img({ url }) {
       transition={{ delay: 1 }}
       className="block w-full max-h-[600px] my-2 relative"
     >
+      {/* 
+        sizes : to scale down image on viewport level, 
+        especially for image that's not supposed to fill full viewport (ex : thumbnail)
+        layout responsive : to scale image based on device screen size
+      */}
       <NextImage
         src={url}
-        width={imgWidth}
-        height={imgHeight}
+        width={width}
+        height={height}
+        sizes="50vw"
+        layout="responsive"
         objectFit="cover"
         className="rounded cursor-pointer"
       />

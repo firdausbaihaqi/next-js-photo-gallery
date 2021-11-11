@@ -3,7 +3,7 @@ import { storage, db, timestamp } from '../firebase/config'
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage'
 import { collection, addDoc } from 'firebase/firestore'
 
-const useStorage = (file) => {
+const useStorage = (file, width, height) => {
     const [progress, setProgress] = useState(0)
     const [error, setError] = useState(null);
     const [url, setUrl] = useState(null);
@@ -25,6 +25,8 @@ const useStorage = (file) => {
                 url,
                 createdAt: timestamp,
                 fileName: file.name,
+                width: width,
+                height: height
             })
             setUrl(url)
         })

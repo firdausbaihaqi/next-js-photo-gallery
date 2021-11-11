@@ -3,7 +3,7 @@ function Title() {
     <div className="text-center">
       <h1 className="text-4xl font-bold text-gray-600">Splash It</h1>
       <p className="mt-5 text-base text-gray-500">
-        an Unsplash photo gallery clone, because why not
+        yet another Unsplash photo gallery clone, because why not
       </p>
     </div>
   );
