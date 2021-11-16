@@ -22,7 +22,9 @@ function Img({ url, width, height }) {
         sizes="50vw"
         layout="responsive"
         objectFit="cover"
-        className="rounded cursor-pointer"
+        placeholder="blur"
+        blurDataURL={`https://via.placeholder.com/${width}x${height}.jpg?text=+`}
+        className="cursor-pointer sm:rounded"
       />
     </motion.div>
   );

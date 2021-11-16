@@ -16,7 +16,7 @@ export default function Home() {
       <section>
         <Title />
         <UploadForm />
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="w-full">
           <ImgList />
         </motion.div>
       </section>

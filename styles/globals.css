@@ -12,9 +12,29 @@ body {
 }
 
 .inputBtn {
-  @apply bg-red-400 border-white hover:border-2 hover:border-white hover:bg-red-400 btn btn-circle hover:ring-2 ring-red-400;
+  @apply border-white bg-primary hover:border-2 hover:border-white hover:bg-primary btn btn-circle hover:ring-2 ring-primary;
+}
+
+.input-primary-custom {
+  @apply rounded outline-none ring-2 ring-red-100 hover:ring-primary focus:ring-primary;
+  flex-shrink: 1;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-duration: 0.15s;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  height: 3rem /* 48px */;
+  font-size: 0.875rem /* 14px */;
+  line-height: 1.25rem /* 20px */;
+  line-height: 2;
+  padding-left: 1rem /* 16px */;
+  padding-right: 1rem /* 16px */;
 }
 
 .uploadBtn {
-  @apply bg-red-400 border-white hover:border-2 hover:border-white hover:bg-red-400 btn font-sans tracking-wider hover:ring-2 ring-red-400;
+  @apply font-sans tracking-wider border-white bg-primary hover:border-2 hover:border-white hover:bg-primary btn hover:ring-2 ring-primary;
+}
+
+.badge-primary-custom {
+  @apply bg-white border cursor-pointer border-primary badge text-primary hover:text-white hover:bg-primary;
 }

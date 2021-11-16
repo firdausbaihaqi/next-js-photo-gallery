@@ -6,14 +6,14 @@ function ImageList() {
   const { docs } = useFirestore("images");
 
   return (
-    <div className="w-full gap-6 mt-5 col-count-1 md:col-count-2 lg:col-count-3 ">
+    <div className="w-full gap-6 mt-10 col-count-1 md:col-count-2 lg:col-count-3 ">
       {docs &&
         docs.map((doc) => (
           <motion.div
             whileHover={{ opacity: 0.8 }}
             layout
             key={doc.id}
-            className="inline-block w-full h-auto opacity-100"
+            className="inline-block w-full h-auto my-8 opacity-100 md:my-0"
           >
             <Img url={doc.url} width={doc.width} height={doc.height} />
           </motion.div>

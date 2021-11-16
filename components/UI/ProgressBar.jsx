@@ -1,8 +1,22 @@
 import { useEffect } from "react";
 import useStorage from "../../hooks/useStorage";
 
-function ProgressBar({ file, setFile, setIsUploading, width, height }) {
-  const { progress, url } = useStorage(file, width, height);
+function ProgressBar({
+  file,
+  setFile,
+  setIsUploading,
+  width,
+  height,
+  selectedTags,
+  isAnonymous,
+}) {
+  const { progress, url } = useStorage(
+    file,
+    width,
+    height,
+    selectedTags,
+    isAnonymous
+  );
 
   useEffect(() => {
     if (url) {

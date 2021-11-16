@@ -1,6 +1,6 @@
 ### Todo : 
 - [ ] cleanup code
 - [ ] add authentication
-- [ ] add author, title, tags
+- [x] add author and tags
 - [ ] add search feature
 - [ ] add similar images result in image detail

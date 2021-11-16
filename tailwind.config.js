@@ -6,7 +6,11 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "rgba(248, 113, 113, 1)"
+      }
+    },
   },
   variants: {
     extend: {},
@@ -27,5 +31,5 @@ module.exports = {
       }
       addUtilities(columnCount, ['responsive'])
     })
-  ],
+  ]
 }
