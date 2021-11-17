@@ -44,7 +44,11 @@ function UploadFormPreview({
   };
 
   const handleClick = () => {
-    handleUpload(selectedTags, checkboxRef.current.checked);
+    if (selectedTags.length > 0) {
+      handleUpload(selectedTags, checkboxRef.current.checked);
+    } else {
+      alert("Sorry, you need to select at least one tag for your image");
+    }
   };
 
   // const handleInputChange = (e) => {
@@ -77,8 +81,10 @@ function UploadFormPreview({
         {/* tags search */}
         <div className="flex-1 ">
           <div className="mb-5 form-control">
-            <label className="label">
-              <span className="label-text">Tags</span>
+            <label className="inline-block my-2 md:mt-0 label">
+              <span className="label-text">
+                Select your tags from selection below :
+              </span>
             </label>
             {/* <input
               ref={inputSearchRef}
@@ -136,10 +142,15 @@ function UploadFormPreview({
               <input
                 id="anonymous"
                 type="checkbox"
+                checked
+                disabled
                 className="bg-white checkbox"
                 ref={checkboxRef}
               />
             </div>
+            <label className="ml-1 text-xs text-red-500 label-text">
+              Auth feature is under development
+            </label>
           </div>
           <button className="mt-5 uploadBtn btn-block" onClick={handleClick}>
             Upload

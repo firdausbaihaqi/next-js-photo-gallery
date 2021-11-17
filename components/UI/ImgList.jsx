@@ -10,12 +10,17 @@ function ImageList() {
       {docs &&
         docs.map((doc) => (
           <motion.div
-            whileHover={{ opacity: 0.8 }}
             layout
             key={doc.id}
-            className="inline-block w-full h-auto my-8 opacity-100 md:my-0"
+            className="inline-block w-full h-auto my-4 opacity-100 md:my-0"
           >
-            <Img url={doc.url} width={doc.width} height={doc.height} />
+            <Img
+              url={doc.url}
+              width={doc.width}
+              height={doc.height}
+              tags={doc.selectedTags}
+              isAnonymous={doc.isAnonymous}
+            />
           </motion.div>
         ))}
     </div>
