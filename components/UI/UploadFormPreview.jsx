@@ -1,5 +1,5 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 
 function UploadFormPreview({
   previewFile,
@@ -65,11 +65,17 @@ function UploadFormPreview({
       <div className="max-w-md px-5">
         <div className="flex justify-center">
           {/* needs to be rendered to dom before we can get the real size of this image */}
-          <img src={previewFile} hidden onLoad={handleLoadPreview} />
+          <img
+            src={previewFile}
+            hidden
+            onLoad={handleLoadPreview}
+            alt="previewHIdden"
+          />
 
           <img
             src={previewFile}
             className="max-h-[400px] w-full sm:max-h-[500px] object-cover rounded"
+            alt="preview"
           />
         </div>
         <div className="flex gap-2 px-4 py-2 mt-5 text-blue-400 bg-blue-100 rounded">

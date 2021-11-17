@@ -34,7 +34,7 @@ function Img({ url, width, height, tags, isAnonymous }) {
           </span>
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <div className="font-sans capitalize rounded-sm badge badge-ghost">
+              <div key={tag} className="font-sans capitalize rounded-sm badge badge-ghost">
                 {tag}
               </div>
             ))}
@@ -47,7 +47,7 @@ function Img({ url, width, height, tags, isAnonymous }) {
         </span>
         <div className="flex flex-wrap gap-2 px-3">
           {tags.map((tag) => (
-            <div className="font-sans capitalize rounded-sm badge">{tag}</div>
+            <div key={tag} className="font-sans capitalize rounded-sm badge">{tag}</div>
           ))}
         </div>
       </div>
